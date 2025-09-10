@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang ="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>ToDo | App</title>
+                <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles.css">
+        </head>
+    <body>
+        <div class="app" role="application">
+            <header>
+                <div class="brand">
+                    <div class="logo">🗲DOLT</div>
+                    <div class="title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="btn ghost" aria-label="import">Import</button>
+                    <button class="btn" aria-label="docs">Docs</button>
+                    <button class="btn primary" id="openCreate">🟢 AV</button>
+                </div>
+            </header>
+            <main class="grid">
+                <section class="panel" aria-labelledby="form-title">
+                    <h2 id="form-title" style="margin:0 0 12px 0">Create / Edit Tasks</h2>
+                    <form id="itemForm" novalidate>
+                        <input type="number" id="ID" placeholder="ID" required>
+                        <input type="text" id="task_dec" placeholder="Task Description" required>
+                        <div style="display:flex;gap:10px;margin-top:12px;">
+                            <button type="submit" class="btn primary">Save</button>
+                            <button type="button" class="btn" id="resetBtn">Reset</button>
+                            <div style="flex:1"></div>
+                            <span class="small muted"></span>
+                        </div>
+                    </form>
+                </section>
+                <section class="list" aria-labelledby="list-title">
+                    <div class="scroll" id="scroll">
+                        <div class="items" id="items">
+                        <article class="item" data-id="1">
+                        </article>
+                        <div class="empty" id="emptyState" style="display:none;">
+                            
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="css/script.js"></script>
+    </body>
+</html>
