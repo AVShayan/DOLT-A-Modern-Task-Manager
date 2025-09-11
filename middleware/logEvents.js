@@ -1,10 +1,10 @@
 // We will log all the client requests in a reqLog.txt file
 
-const {format} = require('date-fns');
-const {v4:uuid} = require('uuid');
-const path = require('path');
-const fs = require('fs');
-const fsPromises = require('fs').promises;
+import format from 'date-fns';
+import v4:uuid from 'uuid';
+import path = from 'path';
+import fs from 'fs';
+import fsPromises from ('fs').promises;
 
 // Function to log all client request in a reqLog file
 const logEvents = async (message,logName) => {      // message is info about url and logName is file name
@@ -26,5 +26,6 @@ const logger = (req,res,next) => {
      console.log(`${req.method} ${req.path}`);
      next();
 }
+
 
 module.exports = {logEvents,logger};
