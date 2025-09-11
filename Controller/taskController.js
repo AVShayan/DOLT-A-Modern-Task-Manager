@@ -1,5 +1,5 @@
-const Task = require('../Models/Task');
-const mongoose = require('mongoose');
+import Task from '../Models/Task';
+import mongoose from 'mongoose';
 // To List all the tasks of the user  /GET/task
 const getAllTasks = async (req,res) => {
     const task = await Task.find();
@@ -75,4 +75,5 @@ module.exports = {
     checkTask,
     deleteTask,
     deleteAllTasks
+
 }
