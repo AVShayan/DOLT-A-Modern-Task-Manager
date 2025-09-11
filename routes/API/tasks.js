@@ -1,8 +1,7 @@
 // This REST API is designed to perform CRUD operations on Tasks.
-
-const express = require('express');
-const router = express();
-const taskControlller = require('../../Controller/taskController');
+import express from 'express';
+import router from express();
+import taskControlller = from '../../Controller/taskController';
 
 router.route('/')
    .get(taskControlller.getAllTasks)
@@ -16,5 +15,6 @@ router.route('/:id')
 
 router.route('/reset')
    .delete(taskControlller.deleteAllTasks)
+
 
 module.exports = router;
