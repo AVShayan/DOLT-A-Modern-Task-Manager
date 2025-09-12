@@ -1,3 +1,15 @@
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 :root{
     --bg: #020024;
     --card: #0b1220;
@@ -38,6 +50,8 @@ header{
     display: grid;place-content: center;font-weight: 500;color:white;font-size: 15px;
 }
 .title{
+    animation-name: tracking-in-expand;
+    animation-duration: 1s;
     list-style: 1;
 }
 .title h1{font-size: 18px;margin: 0}
@@ -125,4 +139,5 @@ textarea{min-height:120px;resize:vertical}
 .app>*{animation: floatIn .28s both}
 
 :focus{outline: 2px solid rgba(124,58,237,0.22);outline-offset: 2px}
+
 
